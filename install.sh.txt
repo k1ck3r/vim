@@ -4,3 +4,4 @@ pip3 install --user git+git://github.com/powerline/powerline
 
 # working on cygwin
 
+# 2nd try
