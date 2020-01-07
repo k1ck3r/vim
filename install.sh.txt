@@ -4,6 +4,7 @@ pip install powerline-status
 
 # centos
 yum install python3 python3-pip vim-enhanced
+pip3 install powerline-status
 
 # pathogen install
 mkdir -p .vim/{autoload,bundle}
