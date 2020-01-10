@@ -1,25 +1,31 @@
-### --- Source global definitions.
+# CentOS
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-### --- Disable systemctl's auto-paging feature.
-export SYSTEMD_PAGER=
+# Debian
+if [ -f /etc/bash.bashrc ]; then
+    . /etc/bash.bashrc
+fi
 
-### --- User specific aliases and functions.
+export SYSTEMD_PAGER=
+export LS_OPTIONS='--color=auto'	export SYSTEMD_PAGER=
+eval "`dircolors`"	
+alias ls='ls $LS_OPTIONS'	
+alias ll='ls $LS_OPTIONS -l'	
+alias l='ls $LS_OPTIONS -lA'	
+
+# Some more QoL aliases:	
 alias vi='vim'
+alias rm='rm -i'	
+alias cp='cp -i'	
+alias mv='mv -i'	
 alias sctl='systemctl'
 
-### --- Don't put duplicate lines in the history.
-HISTCONTROL=ignoreboth
-
-### --- Set history format.
-HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
+export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
 export HISTFILESIZE=10000
 export HISTSIZE=${HISTFILESIZE}
 
-### --- Set prompt.
-# PS1="\[\033[00m\][\[\033[00;31m\]\u\[\033[00m\]][\[\033[00;32m\]\h\[\033[00m\]][\[\033[00;34m\]\w\[\033[00m\]]#\[\033[00m\] "
-
-# ymarinov
+# ymarinov's prompt
 export PS1="\[\033[38;5;10m\][\[$(tput sgr0 -T xterm)\]\[\033[38;5;9m\]\u\[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]@\[$(tput sgr0 -T xterm)\]\[\033[38;5;3m\]\h\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]:\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\] \[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]\w\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]]\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0 -T xterm)\]"
