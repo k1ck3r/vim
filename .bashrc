@@ -22,7 +22,7 @@ alias cp='cp -i'
 alias mv='mv -i'	
 alias sctl='systemctl'
 
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
 export HISTFILESIZE=10000
 export HISTSIZE=${HISTFILESIZE}
