@@ -8,6 +8,17 @@ if [ -f /etc/bash.bashrc ]; then
     . /etc/bash.bashrc
 fi
 
+export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
+export HISTFILESIZE=10000
+export HISTSIZE=${HISTFILESIZE}
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 export SYSTEMD_PAGER=
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"	
@@ -21,11 +32,6 @@ alias rm='rm -i'
 alias cp='cp -i'	
 alias mv='mv -i'	
 alias sctl='systemctl'
-
-export HISTCONTROL=ignoreboth
-export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
-export HISTFILESIZE=10000
-export HISTSIZE=${HISTFILESIZE}
 
 # ymarinov's prompt
 if [ $EUID -eq 0 ]; then
