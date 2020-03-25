@@ -9,4 +9,6 @@ pip3 install powerline-status
 # pathogen install
 mkdir -p .vim/{autoload,bundle}
 git clone https://github.com/tpope/vim-pathogen.git /tmp/pathogen && cp /tmp/pathogen/autoload/pathogen.vim .vim/autoload/
+cp -r vim/.vim* .
+cp -r vim/.fzf* .
 
