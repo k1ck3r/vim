@@ -12,4 +12,5 @@ git clone https://github.com/tpope/vim-pathogen.git /tmp/pathogen && cp /tmp/pat
 cp vim/hacks/systemctl /etc/bash_completion.d/
 cp -r vim/.vim* .
 cp -r vim/.fzf* .
+chmod +x ~/.fzf/bin/fzf
 
