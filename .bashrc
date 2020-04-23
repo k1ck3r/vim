@@ -29,7 +29,7 @@ export HISTSIZE=${HISTFILESIZE}
 
 # ymarinov's prompt
 if [ $EUID -eq 0 ]; then
-    export PS1="\[\033[38;5;10m\][\[$(tput sgr0 -T xterm)\]\[\033[38;5;9m\]\u\[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]@\[$(tput sgr0 -T xterm)\]\[\033[38;5;3m\]\h\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]:\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\] \[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]\w\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]]\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0 -T xterm)\]"		export PS1="\[\033[38;5;10m\][\033[38;5;9m\]\u\033[38;5;10m\]\[\033[38;5;14m\]@\[\033[38;5;3m\]\h\[\033[38;5;10m\]:\[\033[38;5;14m\] \w\[\033[38;5;10m\]]\[\033[38;5;9m\]\\$ \[\033[38;5;15m\]"
+    export PS1="\[\033[38;5;10m\][\[$(tput sgr0 -T xterm)\]\[\033[38;5;9m\]\u\[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]@\[$(tput sgr0 -T xterm)\]\[\033[38;5;3m\]\h\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]:\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\] \[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]\w\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]]\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0 -T xterm)\]"
 else
     export PS1="\[\033[38;5;10m\][\[$(tput sgr0 -T xterm)\]\[\033[38;5;245m\]\u\[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]@\[$(tput sgr0 -T xterm)\]\[\033[38;5;3m\]\h\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]:\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\] \[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]\w\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]]\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0 -T xterm)\]"
 fi
