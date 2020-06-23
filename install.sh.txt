@@ -3,7 +3,7 @@ apt install python3 python3-pip vim-nox
 pip install powerline-status
 
 # centos
-yum install python3 python3-pip vim-enhanced bash-completion -y && pip install --upgrade pip && pip3 install powerline-status
+yum install python3 python3-pip vim-enhanced bash-completion -y && pip3 install --upgrade pip && pip3 install powerline-status
 
 # pathogen install
 mkdir -p .vim/{autoload,bundle}
@@ -18,5 +18,4 @@ cat vim/bashrc >> ./.bashrc
 cp -r vim/.fzf* .
 chmod +x ~/.fzf/bin/fzf
 
-
-
+cd vim/pkg && tar xvfz grc_1.11.3.orig.tar.gz && cd grc-1.11.3 && ./install.sh && cd -
