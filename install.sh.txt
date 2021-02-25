@@ -5,7 +5,7 @@ pip install powerline-status
 ### centos
 yum install epel-release -y
 
-yum install redhat-lsb-core ntpdate telnet fail2ban bash-completion net-snmp yum-axelget yum-cron yum-plugin-aliases yum-plugin-copr yum-utils yum-plugin-changelog python3 python3-pip  htop curl wget lsof nano vim-enhanced gdisk parted git tcpdump iotop sysstat iptables-services net-tools bind-utils telnet mlocate mc pciutils -y
+yum install redhat-lsb-core ntpdate telnet fail2ban-server bash-completion net-snmp yum-axelget yum-cron yum-plugin-aliases yum-plugin-copr yum-utils yum-plugin-changelog python3 python3-pip  htop curl wget lsof nano vim-enhanced gdisk parted git tcpdump iotop sysstat iptables-services net-tools bind-utils telnet mlocate mc pciutils -y
 
 pip3 install --upgrade pip && pip3 install powerline-status
 
