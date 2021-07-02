@@ -18,6 +18,26 @@ cp vim/hacks/systemctl /etc/bash_completion.d/
 cat vim/vimrc > ~/.vimrc
 cat vim/bashrc > ~/.bashrc
 
+### PS1 system wide
+echo 'if [ $EUID -eq 0 ]; then
+    export PS1="\[\033[38;5;10m\][\[$(tput sgr0 -T xterm)\]\[\033[38;5;9m\]\u\[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]@\[$(tput sgr0 -T xterm)\]\[\033[38;5;3m\]$(hostname -f|sed 's/\.x3me\.net//')\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]:\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\] \[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]\w\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]]\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0 -T xterm)\]"
+else
+    export PS1="\[\033[38;5;10m\][\[$(tput sgr0 -T xterm)\]\[\033[38;5;245m\]\u\[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]@\[$(tput sgr0 -T xterm)\]\[\033[38;5;3m\]$(hostname -f|sed 's/\.x3me\.net//')\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]:\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\] \[$(tput sgr0 -T xterm)\]\[\033[38;5;14m\]\w\[$(tput sgr0 -T xterm)\]\[\033[38;5;10m\]]\[$(tput sgr0 -T xterm)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0 -T xterm)\]"
+fi' >> /etc/bashrc
+
+### alias system wide and bash options system wide
+echo "alias vi='vim'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias sctl='systemctl'
+alias c='clear'
+
+export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
+export HISTFILESIZE=10000
+export HISTSIZE=${HISTFILESIZE}" >> /etc/bashrc
+
 ### nice reverse search 
 cp -r vim/.fzf* ~
 chmod +x ~/.fzf/bin/fzf
