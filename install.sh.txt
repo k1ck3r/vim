@@ -32,6 +32,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias sctl='systemctl'
 alias c='clear'
+alias rm_old_kernels='package-cleanup --oldkernels --count=2'
 
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
