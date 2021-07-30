@@ -31,7 +31,11 @@ alias rm_old_kernels='package-cleanup --oldkernels --count=2'
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
 export HISTFILESIZE=10000
-export HISTSIZE=${HISTFILESIZE}" >> /etc/bashrc
+export HISTSIZE=${HISTFILESIZE}
+
+[ -f /etc/profile.d/grc.bashrc ] && source /etc/profile.d/grc.bashrc
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+" >> /etc/bashrc
 
 ### nice reverse search
 cp -r vim/.fzf* ~
