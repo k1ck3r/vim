@@ -42,3 +42,12 @@ cd vim/pkg && tar xvfz grc_1.11.3.orig.tar.gz && cd grc-1.11.3 && ./install.sh &
 
 # set MAX kernel which can be installed
 dnf remove --oldinstallonly --setopt installonly_limit=2 kernel
+
+# disable SELinux
+/etc/selinux/config
+
+# disable network manager and firewalld
+systemctl disable --now NetworkManager firewalld
+
+# install simple network scripts
+yum install network-scripts
