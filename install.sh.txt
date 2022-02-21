@@ -36,6 +36,8 @@ alias mv='mv -i'
 alias sctl='systemctl'
 alias c='clear'
 alias rm_old_kernels='package-cleanup --oldkernels --count=2'
+alias zlist='zfs list -o name,avail,used,written,creation -t all -r'
+alias zlistfull='zfs list -o name,avail,used,written,origin,creation -t all -r'
 
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT='[%Y-%m-%d %H:%M:%S] '
